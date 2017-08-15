@@ -7,6 +7,7 @@ import threading
 import sys
 from pushbullet import PushBullet
 import ConfigParser
+import os
 
 bg_api = ""
 pb_api = ""
@@ -45,7 +46,8 @@ def setup():
 	setup_bugsnag()
 	
 	cp = ConfigParser.RawConfigParser()
-	cp.read('appliancealert.ini')
+	config = os.path.join(os.path.dirname(os.path.realpath(__file__)), "appliancealert.ini")
+	cp.read(config)
 	
 	global bg_api
 	global pb_api
