@@ -1,0 +1,3 @@
+[appliance-alert]
+pb_api = YOUR_KEY_HERE
+bugsnag_api = YOUR_KEY_HERE
