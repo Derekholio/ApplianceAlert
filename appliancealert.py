@@ -32,8 +32,9 @@ def setup_gpio():
 def setup_bugsnag():
 	debug_print("Setting up Bugsnag")
 	
+	global bg_api
 	bugsnag.configure(
-		api_key=""
+		api_key=bg_api
 	)
 
 
