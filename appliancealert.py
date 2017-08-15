@@ -14,22 +14,26 @@ debug = False
 
 
 def debug_print(msg):
+    """Prints the provided message if -debug was passed as an argument"""
     if debug:
         print(msg)
 
 
 def pb_alert(title, msg):
+    """Makes a Pushbullet push using the configured API key and provided title and message"""
     pb = PushBullet(pb_api)
     pb.push_note(title, msg)
 
 
 def setup_gpio():
+    """Setups GPIO on the configured pin"""
     debug_print("Setting up GPIO on GPIO{}".format(pin_sensor))
     GPIO.setmode(GPIO.BCM)
     GPIO.setup(pin_sensor, GPIO.IN)
 
 
 def setup_bugsnag():
+    """Setups Bugsnag using the configured API key"""
     debug_print("Setting up Bugsnag")
 
     global bg_api
@@ -39,6 +43,7 @@ def setup_bugsnag():
 
 
 def setup():
+    """Calls other setup methods and reads configuration file"""
     if len(sys.argv) > 1:
         global debug
         debug = (sys.argv[1] == "-debug")
@@ -57,6 +62,7 @@ def setup():
 
 
 def determine_if_in_cycle(watch_time=60):
+    """Reads from the configured GPIO pin for the specified watch_time"""
     stats = {
         'on': 0,
         'off': 0
