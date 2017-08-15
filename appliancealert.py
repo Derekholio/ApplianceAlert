@@ -109,8 +109,8 @@ def main():
                 else:
                     debug_print("No activity detected for {}".format(time.time() - last_vibr))
                     debug_print("")
-                    if (
-                        time.time() - last_vibr) > 300:  # wait 5 minutes before declaring out of cycle to prevent false alerts (drain cycles)
+                    # wait 5 minutes before declaring out of cycle to prevent false alerts (drain cycles)
+                    if (time.time() - last_vibr) > 300:
                         in_cycle = False
 
                 if not in_cycle:
