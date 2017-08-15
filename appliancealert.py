@@ -2,8 +2,6 @@
 import RPi.GPIO as GPIO
 import time
 import bugsnag
-import random
-import threading
 import sys
 from pushbullet import PushBullet
 import ConfigParser
