@@ -1,5 +1,5 @@
 [Unit]
-Description=Mouse Logging Service
+Description=Monitors a vibration sensor to detect when an appliance starts and stops
 
 [Service]
 ExecStart=/home/pi/Desktop/AppAlert/appliancealert.py
