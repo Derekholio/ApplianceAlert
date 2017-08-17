@@ -1,0 +1,10 @@
+[Unit]
+Description=Mouse Logging Service
+
+[Service]
+ExecStart=/home/pi/Desktop/AppAlert/appliancealert.py
+StandardOutput=null
+
+[Install]
+WantedBy=multi-user.target
+Alias=mouselogger.service
