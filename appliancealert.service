@@ -7,4 +7,4 @@ StandardOutput=null
 
 [Install]
 WantedBy=multi-user.target
-Alias=mouselogger.service
+Alias=appliancealert.service
