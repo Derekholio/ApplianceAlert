@@ -118,9 +118,9 @@ def main():
             else:
                 in_cycle = determine_if_in_cycle(5)
                 if in_cycle:
-                    pb_alert("Washer", "We are now in a cycle!")
+                    pb_alert("Washer", "The washer has began a cycle!")
                     last_vibr = time.time()
-                    debug_print("We are now in a cycle...")
+                    debug_print("The washer has began a cycle...")
 
     except KeyboardInterrupt:
         debug_print("Control + C!")
