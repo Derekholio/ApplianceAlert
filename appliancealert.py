@@ -119,6 +119,7 @@ def main():
                 in_cycle = determine_if_in_cycle(5)
                 if in_cycle:
                     pb_alert("Washer", "We are now in a cycle!")
+                    last_vibr = time.time()
                     debug_print("We are now in a cycle...")
 
     except KeyboardInterrupt:
